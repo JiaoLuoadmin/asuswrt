@@ -371,6 +371,8 @@ start_udhcpc(char *wan_ifname, int unit, pid_t *ppid)
 		"-i", wan_ifname,
 		"-p", (snprintf(pid, sizeof(pid), "/var/run/udhcpc%d.pid", unit), pid),
 		"-s", "/tmp/udhcpc",
+		"-x", "61:SKY-FTTC-CLIENT-ID-HEX",
+		"-x", "60:SKY-FTTC-VENDOR-CLASS-HEX",
 		NULL,		/* -t2 */
 		NULL,		/* -T5 */
 		NULL,		/* -A120 */
@@ -387,7 +389,7 @@ start_udhcpc(char *wan_ifname, int unit, pid_t *ppid)
 		NULL, NULL,	/* -x 61:wan_clientid */
 #endif
 		NULL };
-	int index = 7;		/* first NULL */
+	int index = 11;		/* first NULL */
 	int dr_enable;
 
 	/* Use unit */

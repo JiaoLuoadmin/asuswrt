@@ -44,7 +44,7 @@
 #ifdef RTCONFIG_TMOBILE
 #define DUT_DOMAIN_NAME "cellspot.router"
 #else
-#define DUT_DOMAIN_NAME "router.asus.com"
+#define DUT_DOMAIN_NAME "aurora.shonk.org"
 #endif
 #define OLD_DUT_DOMAIN_NAME1 "www.asusnetwork.net"
 #define OLD_DUT_DOMAIN_NAME2 "www.asusrouter.com"

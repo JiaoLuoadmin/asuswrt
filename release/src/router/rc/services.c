@@ -2826,9 +2826,9 @@ void start_upnp(void)
 					upnp_port,
 					upnp_enable ? "yes" : "no",	// upnp enable
 					upnp_mnp_enable ? "yes" : "no",	// natpmp enable
-					nvram_get_int("upnp_secure") ? "yes" : "no",	// secure_mode (only forward to self)
+					"no",    // force secure_mode (only forward to self)
 					nvram_get_int("upnp_ssdp_interval"),
-					get_productid(),
+					"Aurora",                   // force friendly name
 					rt_version, rt_serialno,
 					nvram_get("serial_no") ? : et0macaddr
 				);
